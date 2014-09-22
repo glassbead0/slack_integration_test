@@ -1,1 +1,30 @@
-<h1>options</h1>
+<div class="page-header">
+  <h1>Slack Options</h1>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">
+    <p>Choose what events you want sent to slack</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <%= form_for @slack_integration, url: create_slack_integration_path do |f| %>
+      <%= f.check_box :new_idea%>
+      <%= f.label :new_idea, 'New Idea'%>
+      <br/>
+      <%= f.check_box :new_comment %>
+      <%= f.label :new_comment, 'New Comment' %>
+      <br/>
+      <%= f.check_box :new_vote %>
+      <%= f.label :new_vote, 'New Vote' %>
+      <br/>
+      <%= f.check_box :new_community_member %>
+      <%= f.label :new_community_member, 'New Community Member' %>
+      <br/>
+
+      <%= f.submit class: 'btn btn-success' %>
+    <% end %>
+  </div>
+</div>
