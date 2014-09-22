@@ -8,6 +8,8 @@ class User
   # end
 
   include Mongoid::Document
+
+  has_one :slack_integration
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

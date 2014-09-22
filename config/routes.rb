@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   root 'welcome#index'
 
+  get 'slack_integrations/connect' => 'slack_integrations#connect'
+  get 'slack_integrations/options' => 'slack_integrations#options'
+  get 'slack_integrations/test_notifications' => 'slack_integrations#test_notifications'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
