@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'devise'
 gem 'mongoid'
+gem 'mongo_session_store-rails4'
 gem 'omniauth-slack'
 
 gem 'guard-rspec'

@@ -96,6 +96,8 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.6.0)
     minitest (5.4.1)
+    mongo_session_store-rails4 (5.1.0)
+      actionpack (>= 3.1)
     mongoid (4.0.0)
       activemodel (~> 4.0)
       moped (~> 2.0.0)
@@ -221,6 +223,7 @@ DEPENDENCIES
   guard-rspec
   jbuilder (~> 2.0)
   jquery-rails
+  mongo_session_store-rails4
   mongoid
   omniauth-slack
   rails (= 4.1.4)
