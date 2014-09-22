@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'slack_integrations/options' => 'slack_integrations#options'
   get 'slack_integrations/test_notifications' => 'slack_integrations#test_notifications'
 
+  get '/auth/slack/callback' => 'slack_integrations#options'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
