@@ -14,20 +14,25 @@ class SlackIntegrationsController < ApplicationController
     # raise request.env['omniauth.auth']['extra']['raw_info']['url'].inspect
     oa = request.env['omniauth.auth']['extra']['raw_info']
     @new_hash = {
-      team: oa['team'].inspect,
-      team_id: oa['team_id'].inspect,
-      url: oa['url'].inspect,
-      user: oa['user'].inspect,
-      token: request.env['omniauth.auth']['credentials']['token'].inspect
+      team: oa['team'],
+      team_id: oa['team_id'],
+      url: oa['url'],
+      user: oa['user'],
+      token: request.env['omniauth.auth']['credentials']['token']
     }
-
-    # get channels to display to user
-
-
 
     @slack_integration = SlackIntegration.new(@new_hash)
     @slack_integration.save
     current_user.slack_integration = @slack_integration
+
+    # get channels to display to user
+    @channels_array = JSON.parse(Typhoeus::Request.get("https://slack.com/api/channels.list?token=#{@slack_integration.token}").body)['channels']
+    @channels = []
+
+    @channels_array.each do |channel|
+      @channels << '#' + channel["name"]
+    end
+
   end
 
   def test_notifications

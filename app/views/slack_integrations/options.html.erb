@@ -12,7 +12,7 @@
   <div class="col-sm-6">
     <%= form_for @slack_integration, url: update_slack_integration_path do |f| %>
       <p>Which channel do you want to post to?</p>
-      <%= f.select :channel, options_for_select(%w(#general #random)) %>
+      <%= f.select :channel, options_for_select(@channels) %>
       <hr/>
       <br/>
       <p>Choose what events you want sent to that channel</p>
