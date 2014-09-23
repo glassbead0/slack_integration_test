@@ -10,7 +10,7 @@
 
 <div class="row">
   <div class="col-sm-6">
-    <%= form_for @slack_integration, url: create_slack_integration_path do |f| %>
+    <%= form_for @slack_integration, url: update_slack_integration_path do |f| %>
       <p>Which channel do you want to post to?</p>
       <%= f.select :channel, options_for_select(%w(#general #random)) %>
       <hr/>

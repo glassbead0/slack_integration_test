@@ -6,7 +6,12 @@ gem 'mongo_session_store-rails4'
 gem 'omniauth-slack'
 gem 'table_print'
 
+gem 'typhoeus'
+gem 'guard-bundler'
 gem 'guard-rspec'
+gem 'rspec-rails'
+gem 'faker'
+gem 'factory_girl_rails'
 gem 'capybara'
 
 gem 'bootstrap-generators'

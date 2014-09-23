@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get '/auth/slack/callback' => 'slack_integrations#options'
 
-  patch 'slack_integrations/create' => 'slack_integrations#create', as: 'create_slack_integration'
+  patch 'slack_integrations/update' => 'slack_integrations#update', as: 'update_slack_integration'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
