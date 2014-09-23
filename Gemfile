@@ -4,6 +4,7 @@ gem 'devise'
 gem 'mongoid'
 gem 'mongo_session_store-rails4'
 gem 'omniauth-slack'
+gem 'table_print'
 
 gem 'guard-rspec'
 gem 'capybara'

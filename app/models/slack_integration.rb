@@ -3,7 +3,7 @@ class SlackIntegration
   belongs_to :user
 
   field :token,                 type: String
-  field :channel,               type: String,   default: '#general'
+  field :channel,               type: String
   field :instance_name,         type: String
   field :new_idea,              type: Boolean,  default: false
   field :new_comment,           type: Boolean,  default: false
