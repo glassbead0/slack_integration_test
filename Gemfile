@@ -13,6 +13,7 @@ gem 'rspec-rails'
 gem 'faker'
 gem 'factory_girl_rails'
 gem 'capybara'
+gem 'slack-notifier'
 
 gem 'bootstrap-generators'
 
