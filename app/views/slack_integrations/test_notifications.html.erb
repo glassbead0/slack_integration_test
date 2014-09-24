@@ -1,13 +1,13 @@
 <h1>test notification</h1>
 
-<%= button_tag 'New Idea', class: 'btn btn-primary' %>
+<%= link_to 'New Idea', slack_integrations_new_idea_path, class: 'btn btn-primary' %>
 <%= current_user.slack_integration.new_idea %>
 <br/>
-<%= button_tag 'New Comment', class: 'btn btn-primary' %>
+<%= link_to 'New Comment', slack_integrations_new_comment_path, class: 'btn btn-primary' %>
 <%= current_user.slack_integration.new_comment %>
 <br/>
-<%= button_tag 'New Vote', class: 'btn btn-primary' %>
+<%= link_to 'New Vote', slack_integrations_new_vote_path, class: 'btn btn-primary' %>
 <%= current_user.slack_integration.new_vote %>
 <br/>
-<%= button_tag 'New Community Member', class: 'btn btn-primary' %>
+<%= link_to 'New Community Member', slack_integrations_new_community_member_path, class: 'btn btn-primary' %>
 <%= current_user.slack_integration.new_community_member %>

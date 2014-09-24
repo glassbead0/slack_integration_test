@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   get '/auth/slack/callback' => 'slack_integrations#options'
 
   patch 'slack_integrations/update' => 'slack_integrations#update', as: 'update_slack_integration'
+
+  get 'slack_integrations/new_idea' => 'slack_integrations#new_idea'
+  get 'slack_integrations/new_comment' => 'slack_integrations#new_comment'
+  get 'slack_integrations/new_vote' => 'slack_integrations#new_vote'
+  get 'slack_integrations/new_community_member' => 'slack_integrations#new_community_member'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
