@@ -1,2 +1,13 @@
 <h1>test notification</h1>
-<%# breakstuff %>
+
+<%= button_tag 'New Idea', class: 'btn btn-primary' %>
+<%= current_user.slack_integration.new_idea %>
+<br/>
+<%= button_tag 'New Comment', class: 'btn btn-primary' %>
+<%= current_user.slack_integration.new_comment %>
+<br/>
+<%= button_tag 'New Vote', class: 'btn btn-primary' %>
+<%= current_user.slack_integration.new_vote %>
+<br/>
+<%= button_tag 'New Community Member', class: 'btn btn-primary' %>
+<%= current_user.slack_integration.new_community_member %>

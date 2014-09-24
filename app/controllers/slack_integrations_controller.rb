@@ -41,7 +41,7 @@ class SlackIntegrationsController < ApplicationController
   private
 
   def slack_integration_params(input_params)
-    input_params.permit(:token, :channel, :instance_name, :new_comment, :new_idea, :new_vote, :new_community_member, :team, :team_id, :url, :user, :uid)
+    input_params.permit(:token, :channel, :instance_name, :new_comment, :new_idea, :new_vote, :new_community_member, :team, :team_id, :url, :user)
   end
 
 end
