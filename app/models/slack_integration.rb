@@ -8,7 +8,7 @@ class SlackIntegration
   field :url,                   type: String
   field :user,                  type: String
   field :channel,               type: String
-  field :channel_id,             type: String
+  field :channel_id,            type: String
   field :instance_name,         type: String
   field :new_idea,              type: Boolean,  default: false
   field :new_comment,           type: Boolean,  default: false
